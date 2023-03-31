@@ -1,2 +1,1 @@
-# cv-application
-First project using React. Utilizing components and ES6 modules.
+First Create React App, CV-Application creator that updates live on input, focus on using components, state, and props
