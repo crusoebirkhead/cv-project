@@ -11,4 +11,4 @@ export class EducationView extends React.Component {
         </div>
       );
     }
-  }
+  } 

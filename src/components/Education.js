@@ -41,6 +41,7 @@ export class Education extends React.Component {
                 Date of Study: 
                 <input type="date" name="dateStudy" onChange = {this.handleInputChange}/>
              </label>
+             <button type="submit">Submit</button>
           </form>
           {this.state.submitted && (
           <EducationView 
@@ -52,7 +53,7 @@ export class Education extends React.Component {
         </div>
       );
     }
-  }
+  } 
 
 
 

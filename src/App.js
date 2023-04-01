@@ -34,9 +34,10 @@ class App extends React.Component {
       <div>
         <button onClick={this.handleAddEducationInstance}>Add Education Instance</button>
         <button onClick={this.handleAddExperienceInstance}>Add Experience Instance</button>
-        <h5>{this.state.educationInstances}</h5>
-        <h5>{this.state.experienceInstances}</h5>
+        <label>{this.state.educationInstances}</label>
+        <label>{this.state.experienceInstances}</label>
       </div>
+      <Info />
       <Education />
       <Experience />
     </div>
