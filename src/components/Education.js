@@ -27,8 +27,8 @@ export class Education extends React.Component {
   
     render() {
       return (
-        <div>
-          <form onSubmit = {this.handleSubmit}>
+        <div className = "educationContainer">
+          <form className = "education" onSubmit = {this.handleSubmit}>
             <label>
               School Name:
               <input type="text" name="schoolName" onChange = {this.handleInputChange}/>

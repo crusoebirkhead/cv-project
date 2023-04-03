@@ -4,7 +4,7 @@ export class InfoView extends React.Component {
 
     render() {
       return (
-        <div>
+        <div className="infoView">
           <p>Name: {this.props.name}</p>
           <p>Email: {this.props.email}</p>
         </div>

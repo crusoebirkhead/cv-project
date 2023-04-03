@@ -27,8 +27,8 @@ export class Experience extends React.Component {
   
     render() {
       return (
-        <div>
-          <form onSubmit={this.handleSubmit}>
+        <div className="experienceContainer">
+          <form className = "experience" onSubmit={this.handleSubmit}>
             <label>
               Company Name:
               <input type="text" name="companyName" onChange={this.handleInputChange} />

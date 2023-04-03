@@ -31,15 +31,25 @@ class App extends React.Component {
   render() {
     return (
     <div> 
-      <div>
+
+      <div className="btnContainer">
         <button onClick={this.handleAddEducationInstance}>Add Education Instance</button>
         <button onClick={this.handleAddExperienceInstance}>Add Experience Instance</button>
-        <label>{this.state.educationInstances}</label>
-        <label>{this.state.experienceInstances}</label>
       </div>
+
       <Info />
+
+      <div>
       <Education />
+      <label>{this.state.educationInstances}</label>
+      </div>
+      
+      <div>
       <Experience />
+      <label>{this.state.experienceInstances}</label>
+      </div>
+     
+      
     </div>
     )
   }

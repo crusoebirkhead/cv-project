@@ -27,8 +27,8 @@ export class Info extends React.Component {
 
   render() {
     return (
-      <div>
-        <form className="Info" onSubmit = {this.handleSubmit}>
+      <div className="infoContainer">
+        <form className="info" onSubmit = {this.handleSubmit}>
           <label>
             Name:
             <input type="text" name="name" onChange = {this.handleInputChange}/>
