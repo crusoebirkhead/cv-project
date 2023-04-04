@@ -1,13 +1,17 @@
 import React from 'react'
-
+import {InfoContext} from "../contexts/InfoContext";
 export class InfoView extends React.Component {
 
     render() {
       return (
-        <div className="infoView">
-          <p>Name: {this.props.name}</p>
-          <p>Email: {this.props.email}</p>
-        </div>
+        <InfoContext.Consumer>
+          {({name, email}) => (
+            <div className="infoView">
+              <p>Name: {name}</p>
+              <p>Email: {email}</p>
+            </div>
+          )}
+        </InfoContext.Consumer>
       );
     }
   }
