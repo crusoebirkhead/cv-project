@@ -30,7 +30,7 @@ class App extends React.Component {
 
   render() {
     return (
-    <div> 
+    <div className ="appContainer"> 
 
       <div className="btnContainer">
         <button onClick={this.handleAddEducationInstance}>Add Education Instance</button>

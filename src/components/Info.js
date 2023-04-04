@@ -37,7 +37,7 @@ export class Info extends React.Component {
             Email:
             <input type="email" name="email" onChange = {this.handleInputChange}/>
           </label>
-          <button type="submit">Submit</button>
+          <button className = "sub" type="submit">Submit</button>
         </form>
         {this.state.submitted && (
         <InfoView 

@@ -41,7 +41,7 @@ export class Experience extends React.Component {
               Job Tasks:
               <textarea name="tasks" onChange={this.handleInputChange}></textarea>
             </label>
-            <button type="submit">Submit</button>
+            <button className = "sub" type="submit">Submit</button>
           </form>
           {this.state.submitted && (
             <ExperienceView

@@ -34,10 +34,52 @@ button {
   
 }
 
-.button-9:disabled {
-  cursor: default;
+.sub {
+  width: 20%;
+}
+.info {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+.infoContainer{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 40px 0 40px 0;
+  width: 80%;
 }
 
-.button-9:focus {
-  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+.education{
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+
+.educationContainer{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 40px 0 40px 0;
+  width: 80%;
+}
+
+.educationView {
+  border: 1px solid black;
+}
+
+.experience {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+.experienceContainer{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 40px 0 40px 0;
+  width: 80%;
+}
+
+.appContainer {
+  
 }
