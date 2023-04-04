@@ -1,5 +1,7 @@
 import React from 'react';
-import { InfoView } from './InfoView'
+import {InfoView} from './InfoView'
+import {InfoContext} from "../contexts/InfoContext";
+import InfoForm from "./InfoForm";
 
 export class Info extends React.Component {
 
@@ -7,46 +9,32 @@ export class Info extends React.Component {
     super(props);
     this.state = {
       name: '',
-      email: ''
+      email: '',
+      handleInputChange: this.handleInputChange,
+      handleSubmit: this.handleSubmit
     };
   }
+  //updates state
+  handleInputChange = (event) => {
+    event.preventDefault();
+    const {name, value} = event.target;
+    this.setState({[name]: value});
+  };
 
-      //updates state
-      handleInputChange = (event) => {
-        event.preventDefault();
-        const { name, value } = event.target;
-        this.setState({ [name]: value });
-      };
-  
-      //renders state on submit
-      handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(this.state);
-        this.setState({ submitted: true });
-      };
+  //renders state on submit
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.setState({submitted: true});
+  };
 
   render() {
     return (
-      <div className="infoContainer">
-        <form className="info" onSubmit = {this.handleSubmit}>
-          <label>
-            Name:
-            <input type="text" name="name" onChange = {this.handleInputChange}/>
-          </label>
-          <label>
-            Email:
-            <input type="email" name="email" onChange = {this.handleInputChange}/>
-          </label>
-          <button className = "sub" type="submit">Submit</button>
-        </form>
+      <InfoContext.Provider value={this.state}>
+        <InfoForm/>
         {this.state.submitted && (
-        <InfoView 
-        name={this.state.name}
-        email = {this.state.email}
-        />
+          <InfoView/>
         )}
-      </div>
-        
+      </InfoContext.Provider>
     );
   }
 }
